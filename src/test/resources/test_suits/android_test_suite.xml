@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Android_demo_test" verbose="1">
+	<parameter name="platform" value="android"/>
+	<parameter name="device" value="Oppo"/>
+	<parameter name="hubURL" value="0.0.0.0:4723"/>
+	<test name="android_demo">
+		<classes>
+			<class name="runner.CucumberRunner"/>
+		</classes>
+	</test>
+</suite>
