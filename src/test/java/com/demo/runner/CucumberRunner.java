@@ -1,7 +1,8 @@
-package runner;
+package com.demo.runner;
 
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+import org.testng.annotations.BeforeSuite;
 
 
 @CucumberOptions(features = "src/test/resources/features",
@@ -11,6 +12,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
+    @BeforeSuite
+    public void setUpDriver(){
 
+    }
 
 }

@@ -6,7 +6,7 @@
 	<parameter name="hubURL" value="0.0.0.0:4723"/>
 	<test name="android_demo">
 		<classes>
-			<class name="runner.CucumberRunner"/>
+			<class name="com.demo.runner.CucumberRunner"/>
 		</classes>
 	</test>
 </suite>
