@@ -2,8 +2,6 @@
 
 <suite name="Android_demo_test" verbose="1">
 	<parameter name="platform" value="android"/>
-	<parameter name="device" value="Oppo"/>
-	<parameter name="hubURL" value="0.0.0.0:4723"/>
 	<test name="android_demo">
 		<classes>
 			<class name="com.demo.runner.CucumberRunner"/>
