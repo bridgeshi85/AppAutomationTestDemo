@@ -14,8 +14,9 @@ import java.util.Properties;
 
 @CucumberOptions(features = "src/test/resources/features",
         glue = "com.demo.stepDefs",
-        plugin = { "pretty" },
-        monochrome = true
+        plugin = { "pretty", "html:target/cucumber-reports/report.html" },
+        monochrome = true,
+        tags = "@debug"
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
