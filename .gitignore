@@ -2,3 +2,5 @@
 *.class
 .idea/*.*
 target/*.*
+target/test-classes/test_suits/ios_test_suite.xml
+App_Automation_Demo.iml
