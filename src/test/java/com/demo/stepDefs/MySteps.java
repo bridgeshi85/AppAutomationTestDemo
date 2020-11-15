@@ -85,4 +85,18 @@ public class MySteps {
         Set<String> allContext = AppiumDriverFactory.driver.getContextHandles();
         Assert.assertTrue(allContext.contains("WEBVIEW_com.android.browser"));
     }
+
+    @When("click the privacy policy link")
+    public void clickThePrivacyPolicyLink() {
+        MobileElement element = AppiumUtil.waitForElementPresent(
+                By.id("com.philips.cdp.ohc.tuscany:id/uid_alert_message"),5
+        );
+
+        Point point = element.getLocation();
+
+        int x = point.x + element.getSize().getWidth() - 80;
+        int y = point.y + element.getSize().getHeight() - 40;
+
+        new TouchAction<>(AppiumDriverFactory.driver).tap(PointOption.point(x,y)).perform();
+    }
 }

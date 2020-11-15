@@ -2,7 +2,7 @@ package com.demo.stepDefs;
 
 import com.demo.base.AppiumDriverFactory;
 import io.cucumber.java.After;
-import org.testng.annotations.AfterTest;
+
 
 public class Hooks {
 

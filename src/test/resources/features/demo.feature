@@ -6,8 +6,13 @@ Feature: Sign In
     And start connect to toothbrush
     Then should get failed page
 
-  @debug
   Scenario: Check Terms & Conditions
     Given cancel the privacy agreement
     When click the terms and condition link
-    Then should open the terms page
+    Then should open browser
+
+  @debug
+  Scenario: Check Privacy Policy
+    Given cancel the privacy agreement
+    When click the privacy policy link
+    Then should open browser
