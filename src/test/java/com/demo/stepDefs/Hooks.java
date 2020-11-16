@@ -8,7 +8,7 @@ public class Hooks {
 
     @After
     public void resetApp(){
-        System.out.println("after");
-        //AppiumDriverFactory.driver.resetApp();
+        System.out.println("after scenario");
+        AppiumDriverFactory.driver.resetApp();
     }
 }

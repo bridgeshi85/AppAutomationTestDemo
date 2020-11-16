@@ -17,10 +17,13 @@ public class AppiumDriverFactory {
     public static AppiumDriver<MobileElement> driver;
 
     public static void initDriver(HashMap<String,String> map,String platform) throws MalformedURLException {
-        String apkPath = "src/test/resources/app_packages/Philips_Sonicare_36_9.1.0-releasecandidate-9.1.0-fcb822d3a3-148_playstore.apk";
+        String apkPath = "src/test/resources/app_packages/" +
+                "Philips_Sonicare_36_9.1.0-releasecandidate-9.1.0-fcb822d3a3-148_playstore.apk";
 
         if(platform.toLowerCase().equals("ios")){
-            apkPath = "src/test/resources/app_packages/Philips_Sonicare-8-29102020_125607-releasecandidate-9.1.2-f69f0dbc84-912008_InHouse_Production.ipa";//ios的包
+            apkPath = "src/test/resources/app_packages/" +
+                    "Philips_Sonicare-8-29102020_125607-releasecandidate-" +
+                    "9.1.2-f69f0dbc84-912008_InHouse_Production.ipa";//ios的包
         }
         File app = new File(apkPath);
         //capabilities.setCapability(MobileCapabilityType.APP,encode(platformJson.get("app").toString()));
@@ -33,5 +36,13 @@ public class AppiumDriverFactory {
         }else{
             driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub/"), capabilities);
         }
+    }
+
+    public static boolean isAndroid() {
+        return driver instanceof AndroidDriver;
+    }
+
+    public static boolean isIOS() {
+        return driver instanceof IOSDriver;
     }
 }

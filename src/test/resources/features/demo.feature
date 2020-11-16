@@ -1,5 +1,6 @@
 Feature: Sign In
 
+  @debug
   Scenario: Connect toothbrush failed
     Given I accepted the privacy agreement
     When click the start button
@@ -11,7 +12,6 @@ Feature: Sign In
     When click the terms and condition link
     Then should open browser
 
-  @debug
   Scenario: Check Privacy Policy
     Given cancel the privacy agreement
     When click the privacy policy link
